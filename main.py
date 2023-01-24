@@ -154,6 +154,10 @@ cb=[] #crop_boundaries
 oldcb=[]
 drawing = False
 ix,iy = -1,-1
+f=args['image'].split('.')
+filename=f[0]
+extension=f[1]
+output=filename+'_output.'+extension
 
 try:
     image=cv.imread(args['image'])
@@ -163,7 +167,8 @@ except:
 print('Use mouse to select a region by "click and drag"')
 print('Press "ENTER" button to validate the region drawn by mouse')
 print('Press "c" button to delete all borders and load original image')
-print('Press "q" button to quit the script')
+print('Press "s" button to save the image with border')
+print('Press "q" button to close or quit the script')
 
 drawn=image.copy()
 original=image.copy()
@@ -181,6 +186,9 @@ while(True):
     elif k==ord('c') or k==ord('C'):
         image=original.copy()
         drawn=original.copy()
+        
+    elif k==ord('s') or k==ord('S'):
+        cv.imwrite(output,drawn)
 
 
 cv.destroyAllWindows()

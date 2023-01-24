@@ -47,5 +47,6 @@ python3 main.py -i input.jpg
 - Use mouse to select a region by "click and drag"
 - Press "ENTER" button to validate the region drawn by mouse
 - Press "c" button to delete all borders and load original image
-- Press "q" button to quit the script
+- Press "s" button to save the image with border. This saves the image with a suffix `_output`
+- Press "q" button to close or quit the script
 
