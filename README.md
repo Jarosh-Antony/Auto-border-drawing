@@ -31,7 +31,8 @@ pip install -r requirement.txt
 ## Usage
 The script can only run as a CLI.
 
-The flag `-i` is a must to specify the path of input image.
+- The flag `-i` is a must to specify the path of input image.
+- The flag `-o` is optional. It specifies the output path and filename of the image while saving. Default saving path is same as input with filename appended with _output and uses same extension. While specifying the output filename, if the extension is not provided or OpenCV cannot save with specified extension, it uses the same extension of the input image.
 
 ### Windows
 ```bash
@@ -47,6 +48,6 @@ python3 main.py -i input.jpg
 - Use mouse to select a region by "click and drag"
 - Press "ENTER" button to validate the region drawn by mouse
 - Press "c" button to delete all borders and load original image
-- Press "s" button to save the image with border. This saves the image with a suffix `_output` to the filename.
+- Press "s" button to save the image with border. to the filename.
 - Press "q" button to close or quit the script
 
