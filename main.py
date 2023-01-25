@@ -148,6 +148,7 @@ def selectROI(event,x,y,flags,param):
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required = True, help ="Path to the image")
+ap.add_argument("-o", "--output", required = False, help ="specify the output path of the image")
 args = vars(ap.parse_args())
 
 cb=[] #crop_boundaries
@@ -155,9 +156,10 @@ oldcb=[]
 drawing = False
 ix,iy = -1,-1
 f=args['image'].split('.')
+o=args['output']
 filename=f[0]
 extension=f[1]
-output=filename+'_output.'+extension
+output=filename+'_output.'+extension if o==None else o
 
 try:
     image=cv.imread(args['image'])
@@ -188,7 +190,10 @@ while(True):
         drawn=original.copy()
         
     elif k==ord('s') or k==ord('S'):
-        cv.imwrite(output,drawn)
+        try:
+            cv.imwrite(output,drawn)
+        except:
+            cv.imwrite(output+'.'+extension,drawn)
 
 
 cv.destroyAllWindows()
