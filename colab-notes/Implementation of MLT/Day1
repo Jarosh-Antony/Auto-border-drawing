@@ -1,0 +1,596 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Jarosh-Antony/Auto-border-drawing/blob/main/colab-notes/Implementation%20of%20MLT/Day1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Vectors\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "H729Vxqsdh5_"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Import\n",
+        "\n",
+        "First we shall import the `NumPy` package."
+      ],
+      "metadata": {
+        "id": "B1cOisjsIQWW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "9BmIfrx3IXZz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Python Lists\n",
+        "\n",
+        "Consider the following vectors:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{x} = \\begin{bmatrix}\n",
+        "1\\\\\n",
+        "2\\\\\n",
+        "3\n",
+        "\\end{bmatrix}, \\mathbf{y} = \\begin{bmatrix}\n",
+        "4\\\\\n",
+        "5\\\\\n",
+        "6\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "We can add these two vectors:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{z} = \\mathbf{x} + \\mathbf{y}= \\begin{bmatrix}\n",
+        "5\\\\\n",
+        "7\\\\\n",
+        "9\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "Using Python lists:"
+      ],
+      "metadata": {
+        "id": "q4Bvo6cKbRjQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "iBA567DMbkvS"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Vectors as `NumPy` arrays\n",
+        "\n",
+        "Consider the following vector:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{x} = \\begin{bmatrix}\n",
+        "1\\\\\n",
+        "2\\\\\n",
+        "3\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "JvcADsvgIZE3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "83iQmusSIstp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Vector addition\n",
+        "\n",
+        "Addition is one of the elementary operations that can be performed on vectors. Given two vectors\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{x} = \\begin{bmatrix}\n",
+        "1\\\\\n",
+        "2\\\\\n",
+        "3\n",
+        "\\end{bmatrix}, \\mathbf{y} = \\begin{bmatrix}\n",
+        "4\\\\\n",
+        "5\\\\\n",
+        "6\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "we have:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{z} = \\mathbf{x} + \\mathbf{y}= \\begin{bmatrix}\n",
+        "5\\\\\n",
+        "7\\\\\n",
+        "9\n",
+        "\\end{bmatrix}\n",
+        "$$"
+      ],
+      "metadata": {
+        "id": "j-1J_2tTKeFn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "1Pxa2ZGULiq9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Element-wise multiplication\n",
+        "\n",
+        "Element-wise multiplication of two vectors is called the Hadamard product. The operator corresponding to it is $\\odot$. For example, given two vectors:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{x} = \\begin{bmatrix}\n",
+        "1\\\\\n",
+        "2\\\\\n",
+        "3\n",
+        "\\end{bmatrix}, \\mathbf{y} = \\begin{bmatrix}\n",
+        "4\\\\\n",
+        "5\\\\\n",
+        "6\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "we have:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{z} = \\mathbf{x} \\odot \\mathbf{y}= \\begin{bmatrix}\n",
+        "4\\\\\n",
+        "10\\\\\n",
+        "18\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "ap_Zg_CEL9lz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "2v9T-dLrMX8l"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Scaling vectors\n",
+        "\n",
+        "If $\\mathbf{x}$ is a vector, scaling it by a constant $k$ is equivalent to element-wise multiplication by $k$. For example, given\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{x} = \\begin{bmatrix}\n",
+        "1\\\\\n",
+        "2\\\\\n",
+        "3\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "we have:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{y} = 3 \\mathbf{x} = \\begin{bmatrix}\n",
+        "3\\\\\n",
+        "6\\\\\n",
+        "9\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "Fp6OJRQZMjoW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "NQGQmZZFM7_z"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Element-wise functions of vectors\n",
+        "\n",
+        "Scaling a vector $\\mathbf{x}$ by a constant $k$ can be seen as the outcome of the function $f(x) = kx$ applied element-wise:\n",
+        "\n",
+        "$$\n",
+        "\\begin{bmatrix}\n",
+        "f(x_1)\\\\\n",
+        "\\vdots\\\\\n",
+        "f(x_d)\n",
+        "\\end{bmatrix} = \\begin{bmatrix}\n",
+        "kx_1\\\\\n",
+        "\\vdots\\\\\n",
+        "k x_d\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "`NumPy` extends this feature for any arbitrary function. "
+      ],
+      "metadata": {
+        "id": "6U2ERkN5NCPe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Example-1\n",
+        "\n",
+        "For example, consider the function $f(x) = x^2$. This can be applied element-wise:\n",
+        "\n",
+        "$$\n",
+        "\\begin{bmatrix}\n",
+        "x_1^2\\\\\n",
+        "\\vdots\\\\\n",
+        "x_d^2\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "Let us do this for:\n",
+        "\n",
+        "$$\n",
+        "\\begin{bmatrix}\n",
+        "1\\\\\n",
+        "2\\\\\n",
+        "3\\\\\n",
+        "4\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "jRqHYiLSXLt3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "4J5S44ynN0GR"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Example-2.1\n",
+        "\n",
+        "As another example, consider $f(x) = \\log(x)$. This can also be applied element-wise:\n",
+        "\n",
+        "$$\n",
+        "\\begin{bmatrix}\n",
+        "\\log(x_1)\\\\\n",
+        "\\vdots\\\\\n",
+        "\\log(x_d)\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "Let us do this for $\\begin{bmatrix}1 & 10 & 100 & 1000 & 10000 & 100000\\end{bmatrix}^T$. Use base $10$.\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "Vyz1dWlhW3_G"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "jbQ6mp1QN-dG"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Example 2.2\n",
+        "\n",
+        "We can also use log to the base $e$, the natural logarithm. For this, let us take a specific vector:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{x} = \\begin{bmatrix}\n",
+        "1\\\\\n",
+        "e\\\\\n",
+        "e^2\\\\\n",
+        "e^3\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "and apply the function $f(x) = \\ln(x)$ element-wise.\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "Oxn-V4AWYMbr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "I9CwD-g-Oa1F"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Example 3\n",
+        "\n",
+        "Just as we can scale a vector, we can also add a constant to each component. This is equivalent to applying the element-wise function $f(x) = x + c$. Let us take the case of $\\begin{bmatrix}1 & 2 & 3\\end{bmatrix}^T$ and $c = 5$.\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "CLZ6acXdZDzJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "BHsoW6jvmQF1"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Example 4\n",
+        "\n",
+        "Now for a slightly more involved example with $f(x) = 5x - 2$ applied element-wise on the following vector:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{x} = \\begin{bmatrix}\n",
+        "-1\\\\\n",
+        "0\\\\\n",
+        "1\\\\\n",
+        "2\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "TTTvqeYxZw0O"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "-E8n9MT-aBYj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Dot Product\n",
+        "\n",
+        "The dot product between two vectors $\\mathbf{x}$ and $\\mathbf{y}$ is given as follows:\n",
+        "\n",
+        "$$\n",
+        "z = \\mathbf{x}^T \\mathbf{y} =  \\mathbf{x} \\cdot \\mathbf{y} = \\sum \\limits_{j = 1}^{m} x_j y_j\n",
+        "$$\n",
+        "\n",
+        "Let us use the following vectors:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{x} = \\begin{bmatrix}\n",
+        "1\\\\\n",
+        "2\\\\\n",
+        "3\\\\\n",
+        "4\\\\\n",
+        "\\end{bmatrix}, \\mathbf{y} = \\begin{bmatrix}\n",
+        "-4\\\\\n",
+        "-5\\\\\n",
+        "-6\\\\\n",
+        "-7\\\\\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "kQR9yS5ROhFR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "yIdGkJG_OxrL"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Vector of zeros or ones\n",
+        "\n",
+        "On many occassions, we might want to create a `NumPy` array all of whose elements are zeros or ones or some other constant. Let us create the following vectors:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{0} = \\begin{bmatrix}\n",
+        "0\\\\\n",
+        "0\\\\\n",
+        "0\\\\\n",
+        "0\\\\\n",
+        "0\n",
+        "\\end{bmatrix}, \\mathbf{1} = \\begin{bmatrix}\n",
+        "1\\\\\n",
+        "1\\\\\n",
+        "1\\\\\n",
+        "1\\\\\n",
+        "1\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "-oGTCbqVRqUj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "4i6VbthkT36F"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Norm of a vector\n",
+        "\n",
+        "For a vector $\\mathbf{x}$:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{x} = \\begin{bmatrix}\n",
+        "1\\\\\n",
+        "2\\\\\n",
+        "3\n",
+        "\\end{bmatrix}\n",
+        "$$\n",
+        "\n",
+        "The $L_2$ norm is defind as:\n",
+        "\n",
+        "$$\n",
+        "||\\mathbf{x}||_2 = \\sqrt{1^2 + 2^2 + 3^2} = \\sqrt{14}\n",
+        "$$\n",
+        "\n",
+        "The $L_1$ norm is defind as:\n",
+        "\n",
+        "$$\n",
+        "||\\mathbf{x}||_1 = |1| + |2| + |3| = 6\n",
+        "$$\n",
+        "\n",
+        "In `NumPy`:"
+      ],
+      "metadata": {
+        "id": "vLcLxgyZGAt5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "xd7rG_38GL8w"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Shape and dimension of a vector\n",
+        "\n",
+        "Vectors are \"one dimensional\" arrays. So all vectors in `NumPy` have array-dimension equal to one. The term \"array-dimension\" here is defind for a `NumPy` array. It is different from the dimension used in the vector-space sense. The vector-space dimension can be obtaind by looking at the shape of the `NumPy` array.\n",
+        "\n",
+        "Explore these two ideas for:\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{x} = \\begin{bmatrix}\n",
+        "1\\\\\n",
+        "2\\\\\n",
+        "3\\\\\n",
+        "4\n",
+        "\\end{bmatrix}\n",
+        "$$"
+      ],
+      "metadata": {
+        "id": "OGdzUtRAy6_g"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "Hs0Y5qRLzkXY"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
